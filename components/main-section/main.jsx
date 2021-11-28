@@ -9,15 +9,24 @@ import {
 import Stories from "../tab-components/stories";
 import Followers from "../followers";
 import FollowButton from "../follow-button";
+import { useRouter } from "next/router";
 
 const Main = ({ pages }) => {
+  const router = useRouter();
   const tab_class =
     "w-1/3 stories_tab flex flex-col items-center px-4 py-2 border-b-2 border-transparent";
   const [tab, setTab] = useState("stories");
   const handleTabs = (tab) => setTab(tab);
+  if (["/login", "/register"].includes(router.pathname)) {
+    return (
+      <div className="main_section text-white px-4 pb-2 flex pt-20">
+        {pages}
+      </div>
+    );
+  }
   return (
-    <div className="main_section text-white px-4 py-2 flex">
-      <div className="main_section__left w-4/12 mr-1 overflow-y-auto h-screen">
+    <div className="main_section text-white px-4 pb-2 flex pt-4 h-screen">
+      <div className="main_section__left w-4/12 mr-1 overflow-y-auto h-full">
         <div className="main_section__left__profile_section">
           <div className="profile_section__image w-full p-1 border relative shadow">
             <img
@@ -82,16 +91,8 @@ const Main = ({ pages }) => {
               </div>
               <div className="profile_details_stories__components">
                 {"stories" === tab && <Stories />}
-                {"followers" === tab && (
-                  <div className="profile_details_stories__story">
-                    <Followers />
-                  </div>
-                )}
-                {"saved" === tab && (
-                  <div className="profile_details_stories__story">
-                    <h1>Saved Components</h1>
-                  </div>
-                )}
+                {"followers" === tab && <Followers />}
+                {"saved" === tab && <Stories status="favourite" />}
               </div>
             </div>
           </div>

@@ -4,7 +4,7 @@ import Main from "./main-section/main";
 
 const Layout = ({ children }) => {
   return (
-    <div className="bg-gray-900">
+    <div className="bg-gray-900 relative h-screen">
       <Head>
         <title>Litmas | Home</title>
         <meta name="description" content="Litmas is a story share app" />

@@ -27,7 +27,7 @@ const Followers = () => {
     },
   ];
   return (
-    <div className="followers">
+    <div className="profile_details_stories__story followers">
       {followers.map((follower) => (
         <div className="followers__item bg-gray-300 text-black p-1 mb-2 rounded flex justify-between items-center hover:bg-gray-200">
           <div className="followers__left flex items-center">
