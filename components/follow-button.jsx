@@ -14,7 +14,7 @@ const FollowButton = () => {
   return (
     <button
       onClick={handleFollowButton}
-      className={`text-sm py-2 mr-2 rounded px-${loading ? "6" : "4"} ${
+      className={`text-sm py-2 mr-2 rounded ${loading ? "px-6" : "px-4"} ${
         followed
           ? "bg-gray-700 hover:bg-gray-500"
           : "bg-blue-700 hover:bg-blue-500"

@@ -10,7 +10,7 @@ const Header = () => {
     setOpen(!open);
   };
   return (
-    <header className="bg-white h-16 p-4 flex justify-between items-center absolute w-full">
+    <header className="bg-white px-4 py-3 flex justify-between items-center absolute w-full">
       <div>
         <h1 className="text-3xl font-bold">
           <Link href="/">
@@ -31,7 +31,7 @@ const Header = () => {
             className="border-2 rounded p-2 focus:outline-none focus:border-blue-700"
           />
         </form>
-        {router.pathname !== "/login" && (
+        {!["/login", "/register"].includes(router.pathname) && (
           <div className="relative">
             <button
               onClick={handleDropdown}

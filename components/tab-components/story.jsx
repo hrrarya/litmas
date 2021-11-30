@@ -2,7 +2,7 @@ import { FaStar } from "react-icons/fa";
 const Story = ({ children, status }) => {
   return (
     <div className="stories_item w-1/3 px-2 overflow-hidden rounded relative">
-      <div className="mb-3 h-44 bg-gray-300 relative flex overflow-hidden items-center">
+      <div className="mb-3 h-44 bg-gray-300 relative flex overflow-hidden items-center h-64">
         <div className="transition duration-200 stories_overlay h-full bg-gray-600 hover:bg-transparent cursor-pointer" />
         {children}
       </div>

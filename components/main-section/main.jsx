@@ -19,13 +19,13 @@ const Main = ({ pages }) => {
   const handleTabs = (tab) => setTab(tab);
   if (["/login", "/register"].includes(router.pathname)) {
     return (
-      <div className="main_section text-white px-4 pb-2 flex pt-20">
+      <div className="main_section text-white px-4 pb-2 flex pt-24">
         {pages}
       </div>
     );
   }
   return (
-    <div className="main_section text-white px-4 pb-2 flex pt-4 h-screen">
+    <div className="main_section text-white px-4 pb-2 flex pt-24 h-screen">
       <div className="main_section__left w-4/12 mr-1 overflow-y-auto h-full">
         <div className="main_section__left__profile_section">
           <div className="profile_section__image w-full p-1 border relative shadow">

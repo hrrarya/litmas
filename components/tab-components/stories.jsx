@@ -26,8 +26,8 @@ const Stories = ({ status = "" }) => {
   return (
     <div className="flex flex-wrap ">
       {storyObj.map((story) => (
-        <Story status={status}>
-          <img key={story.id} src={story.image} alt="story one" />
+        <Story key={story.id} status={status}>
+          <img src={story.image} alt="story one" />
         </Story>
       ))}
     </div>

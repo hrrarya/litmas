@@ -6,7 +6,7 @@ import StoryAvatar from "./tab-components/story-avater";
 const SwiperComp = () => {
   SwiperCore.use([Autoplay]);
   return (
-    <div className="w-1/3 flex my-0 mx-auto items-center">
+    <div className="w-1/3 flex my-0 mx-auto">
       <Swiper slidesPerView={1} autoplay={{ delay: 10000 }}>
         <SwiperSlide>
           <StoryAvatar />

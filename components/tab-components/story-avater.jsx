@@ -8,7 +8,7 @@ const StoryAvatar = () => {
     setFavourite(!favourite);
   };
   return (
-    <div className="absolute top-0 px-1 py-2 flex items-center justify-between w-full">
+    <div className="absolute top-0 p-2 flex items-center justify-between w-full">
       <div className="flex items-center">
         <Image
           src="/images/user.svg"
